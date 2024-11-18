@@ -1,0 +1,20 @@
+Burkina Faso.csv (text/csv) 5458709 bytes.
+0. Disclaimer.pdf (application/pdf) 218935 bytes.
+Angola.csv (text/csv) 22847957 bytes.
+Botswana.csv (text/csv) 16787063 bytes.
+Cameroon.csv (text/csv) 5709229 bytes.
+Ethiopia.csv (text/csv) 20808731 bytes.
+Ghana.csv (text/csv) 17008454 bytes.
+Guinea.csv (text/csv) 10525238 bytes.
+Kenya.csv (text/csv) 15450291 bytes.
+Madagascar.csv (text/csv) 11315725 bytes.
+Malawi.csv (text/csv) 11474703 bytes.
+Mali.csv (text/csv) 22550596 bytes.
+Mozambique.csv (text/csv) 34227187 bytes.
+Niger.csv (text/csv) 5672278 bytes.
+Nigeria.csv (text/csv) 28169291 bytes.
+SAfrica.csv (text/csv) 13031296 bytes.
+Tanzania.csv (text/csv) 37272260 bytes.
+Uganda.csv (text/csv) 9863855 bytes.
+Zambia.csv (text/csv) 22851780 bytes.
+Zimbambwe.csv (text/csv) 16122234 bytes.
