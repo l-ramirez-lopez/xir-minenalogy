@@ -16,7 +16,7 @@ rm(list = ls())
 # list spectra provided in subfolders named country
 # data source: https://data.worldagroforestry.org/dataset.xhtml?persistentId=doi%3A10.34725%2FDVN%2FQXCWP1 
 csv_list <- list.files(
-  path = "data/AfSIS_MIR_all/",  # set the path to your data
+  path = "data/MIRdata/rawdata/",  # set the path to your data
   pattern = ".csv", recursive = TRUE,
   full.names = TRUE) 
 
@@ -53,19 +53,15 @@ colnames(spec_XRPD)
 colnames(spec_XRPD) <- gsub("m", "", colnames(spec_XRPD))
 colnames(spec_XRPD)
 
-
-#wavenumbers <- 
+# wavenumbers
 wavs <- colnames(spec_XRPD)[grep("^[0-9]", colnames(spec_XRPD))]
 
-# names non-spectral data 
+# names non-spectral columns 
 nms_non_spec <- colnames(spec_XRPD)[!colnames(spec_XRPD) %in% wavs]
 
-# problematic row:
+# problematic row (NA's instead of spectral absorbance values )
 which(!complete.cases(spec_XRPD[, ..wavs]))
 # [1] 1807
-
-# sample with NA's instead of spectral absorbance values 
-# remove! 
 sample_NAs <- spec_XRPD[!complete.cases(spec_XRPD[, ..wavs]),]
 
 # remove problematic row
@@ -77,4 +73,5 @@ spc_raw <- spec_XRPD.noNA[, ..wavs]
 data_XRPD$spc_raw <- as.matrix(spc_raw)
 str(data_XRPD)
 
-
+# save data 
+saveRDS(data_XRPD, "data/MIRdata/filtered_data/MIRdata_XRPDsamples.rds")
